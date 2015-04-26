@@ -41,7 +41,7 @@
 			<object class="NSWindowTemplate" id="748157544">
 				<int key="NSWindowStyleMask">15</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{131, 74}, {706, 459}}</string>
+				<string key="NSWindowRect">{{131, 74}, {706, 503}}</string>
 				<int key="NSWTFlags">611844096</int>
 				<string key="NSWindowTitle">Chuck Norris</string>
 				<string key="NSWindowClass">MainWindow</string>
@@ -57,7 +57,7 @@
 							<set class="NSMutableSet" key="NSDragTypes">
 								<string>public.item</string>
 							</set>
-							<string key="NSFrame">{{-8, -43}, {775, 508}}</string>
+							<string key="NSFrame">{{-8, 1}, {775, 508}}</string>
 							<reference key="NSSuperview" ref="312036702"/>
 							<reference key="NSWindow"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -65,16 +65,15 @@
 								<object class="NSTabViewItem" id="80828282">
 									<string key="NSIdentifier">1</string>
 									<object class="NSView" key="NSView" id="786900827">
-										<reference key="NSNextResponder" ref="522720611"/>
+										<nil key="NSNextResponder"/>
 										<int key="NSvFlags">274</int>
 										<array class="NSMutableArray" key="NSSubviews">
 											<object class="NSButton" id="740749050">
 												<reference key="NSNextResponder" ref="786900827"/>
 												<int key="NSvFlags">268</int>
 												<array class="NSMutableArray" key="NSSubviews"/>
-												<string key="NSFrame">{{311, 308}, {159, 32}}</string>
+												<string key="NSFrame">{{257, 308}, {159, 32}}</string>
 												<reference key="NSSuperview" ref="786900827"/>
-												<reference key="NSWindow"/>
 												<string key="NSReuseIdentifierKey">_NS:9</string>
 												<bool key="NSEnabled">YES</bool>
 												<object class="NSButtonCell" key="NSCell" id="270858977">
@@ -102,7 +101,7 @@
 												<int key="NSvFlags">268</int>
 												<string key="NSFrame">{{88, 109}, {519, 96}}</string>
 												<reference key="NSSuperview" ref="786900827"/>
-												<reference key="NSWindow"/>
+												<reference key="NSNextKeyView" ref="522720611"/>
 												<string key="NSReuseIdentifierKey">_NS:526</string>
 												<string key="NSHuggingPriority">{251, 750}</string>
 												<bool key="NSEnabled">YES</bool>
@@ -150,7 +149,6 @@
 												</set>
 												<string key="NSFrame">{{90, 270}, {138, 111}}</string>
 												<reference key="NSSuperview" ref="786900827"/>
-												<reference key="NSWindow"/>
 												<string key="NSReuseIdentifierKey">_NS:9</string>
 												<string key="NSHuggingPriority">{251, 251}</string>
 												<bool key="NSEnabled">YES</bool>
@@ -172,8 +170,6 @@
 											</object>
 										</array>
 										<string key="NSFrame">{{10, 33}, {755, 462}}</string>
-										<reference key="NSSuperview" ref="522720611"/>
-										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="749210833"/>
 										<bool key="NSViewIsLayerTreeHost">YES</bool>
 										<string key="NSReuseIdentifierKey">_NS:11</string>
@@ -184,26 +180,30 @@
 								</object>
 								<object class="NSTabViewItem" id="354127333">
 									<object class="NSView" key="NSView" id="342678473">
-										<nil key="NSNextResponder"/>
+										<reference key="NSNextResponder" ref="522720611"/>
 										<int key="NSvFlags">274</int>
 										<string key="NSFrame">{{10, 33}, {755, 462}}</string>
+										<reference key="NSSuperview" ref="522720611"/>
+										<reference key="NSWindow"/>
+										<reference key="NSNextKeyView" ref="522720611"/>
 									</object>
 									<string key="NSLabel">Graph</string>
 									<reference key="NSColor" ref="147898622"/>
 									<reference key="NSTabView" ref="522720611"/>
 								</object>
 							</array>
-							<reference key="NSSelectedTabViewItem" ref="80828282"/>
+							<reference key="NSSelectedTabViewItem" ref="354127333"/>
 							<reference key="NSFont" ref="442204196"/>
 							<int key="NSTvFlags">0</int>
 							<bool key="NSAllowTruncatedLabels">YES</bool>
 							<bool key="NSDrawsBackground">YES</bool>
+							<reference key="NSDelegate"/>
 							<array class="NSMutableArray" key="NSSubviews">
-								<reference ref="786900827"/>
+								<reference ref="342678473"/>
 							</array>
 						</object>
 					</array>
-					<string key="NSFrameSize">{706, 459}</string>
+					<string key="NSFrameSize">{706, 503}</string>
 					<reference key="NSSuperview"/>
 					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="522720611"/>
@@ -269,14 +269,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
-						<string key="label">tabView</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="786900827"/>
-					</object>
-					<int key="connectionID">83</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
 						<string key="label">BehindView</string>
 						<reference key="source" ref="1001"/>
 						<reference key="destination" ref="312036702"/>
@@ -290,22 +282,6 @@
 						<reference key="destination" ref="312036702"/>
 					</object>
 					<int key="connectionID">89</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">GraphView</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="748157544"/>
-					</object>
-					<int key="connectionID">116</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">GraphTabView</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="342678473"/>
-					</object>
-					<int key="connectionID">117</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
@@ -322,6 +298,22 @@
 						<reference key="destination" ref="870265867"/>
 					</object>
 					<int key="connectionID">168</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">QuotesView</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="786900827"/>
+					</object>
+					<int key="connectionID">169</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">GraphView</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="342678473"/>
+					</object>
+					<int key="connectionID">170</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -474,7 +466,7 @@
 				<string key="166.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<boolean value="YES" key="2.IBNSWindowAutoPositionCentersHorizontal"/>
 				<boolean value="YES" key="2.IBNSWindowAutoPositionCentersVertical"/>
-				<string key="2.IBPersistedLastKnownCanvasPosition">{463, 307.5}</string>
+				<string key="2.IBPersistedLastKnownCanvasPosition">{463, 329.5}</string>
 				<string key="2.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="2.IBWindowTemplateEditedContentRect">{{319, 371}, {606, 354}}</string>
 				<boolean value="YES" key="2.NSWindowTemplate.visibleAtLaunch"/>
@@ -496,7 +488,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">168</int>
+			<int key="maxID">170</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -523,37 +515,22 @@
 						</object>
 					</object>
 					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="BehindView">NSView</string>
-						<string key="GraphTabView">NSView</string>
-						<string key="GraphView">MainWindow</string>
-						<string key="WindowLayerView">NSView</string>
+						<string key="GraphView">NSView</string>
+						<string key="QuotesView">NSView</string>
 						<string key="labelChuckSays">NSTextField</string>
-						<string key="tabView">NSView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="BehindView">
-							<string key="name">BehindView</string>
-							<string key="candidateClassName">NSView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="GraphTabView">
-							<string key="name">GraphTabView</string>
-							<string key="candidateClassName">NSView</string>
-						</object>
 						<object class="IBToOneOutletInfo" key="GraphView">
 							<string key="name">GraphView</string>
-							<string key="candidateClassName">MainWindow</string>
+							<string key="candidateClassName">NSView</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="WindowLayerView">
-							<string key="name">WindowLayerView</string>
+						<object class="IBToOneOutletInfo" key="QuotesView">
+							<string key="name">QuotesView</string>
 							<string key="candidateClassName">NSView</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="labelChuckSays">
 							<string key="name">labelChuckSays</string>
 							<string key="candidateClassName">NSTextField</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="tabView">
-							<string key="name">tabView</string>
-							<string key="candidateClassName">NSView</string>
 						</object>
 					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
@@ -563,65 +540,17 @@
 				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">MainWindowController</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="MVToggleChanged:">id</string>
-						<string key="SPToggleChanged:">id</string>
-						<string key="nextQuoteClicked:">id</string>
-						<string key="takeFloatValueFromMV:">id</string>
-						<string key="takeFloatValueFromSP:">id</string>
-						<string key="takeModifiedVariableSiderValue:">id</string>
-						<string key="takeModifiedVariableValue:">id</string>
-						<string key="takeSetPointSliderValue:">id</string>
-						<string key="takeSetPointValue:">id</string>
-						<string key="takeValueFromModifiedVariable:">id</string>
-						<string key="takeValueFromSetPoint:">id</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="MVToggleChanged:">
-							<string key="name">MVToggleChanged:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="SPToggleChanged:">
-							<string key="name">SPToggleChanged:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="nextQuoteClicked:">
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">nextQuoteClicked:</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">nextQuoteClicked:</string>
+						<object class="IBActionInfo" key="NS.object.0">
 							<string key="name">nextQuoteClicked:</string>
 							<string key="candidateClassName">id</string>
 						</object>
-						<object class="IBActionInfo" key="takeFloatValueFromMV:">
-							<string key="name">takeFloatValueFromMV:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="takeFloatValueFromSP:">
-							<string key="name">takeFloatValueFromSP:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="takeModifiedVariableSiderValue:">
-							<string key="name">takeModifiedVariableSiderValue:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="takeModifiedVariableValue:">
-							<string key="name">takeModifiedVariableValue:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="takeSetPointSliderValue:">
-							<string key="name">takeSetPointSliderValue:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="takeSetPointValue:">
-							<string key="name">takeSetPointValue:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="takeValueFromModifiedVariable:">
-							<string key="name">takeValueFromModifiedVariable:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="takeValueFromSetPoint:">
-							<string key="name">takeValueFromSetPoint:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</dictionary>
+					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">../MainWindowController.m</string>
@@ -658,7 +587,7 @@
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="NS.key.0">chuck-norris</string>
-			<string key="NS.object.0">{120, 125}</string>
+			<string key="NS.object.0">{512, 512}</string>
 		</object>
 	</data>
 </archive>

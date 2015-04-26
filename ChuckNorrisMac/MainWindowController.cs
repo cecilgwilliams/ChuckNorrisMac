@@ -33,7 +33,7 @@ namespace ChuckNorrisMac
 		public override void AwakeFromNib ()
 		{
 			base.AwakeFromNib ();
-			tabView.Layer.BackgroundColor = new CoreGraphics.CGColor(1, 1, 1);
+			QuotesView.Layer.BackgroundColor = new CGColor(1, 1, 1);
 			chuckNorrisQuotes = new ChuckNorrisQuotes ();
 		}
 
@@ -41,23 +41,53 @@ namespace ChuckNorrisMac
 		{
 			base.WindowDidLoad ();
 
-			var size = GraphTabView.Frame.Size;
-			var frame = new CGRect (0, 0, size.Width-10, size.Height-10);
+			var size = GraphView.Frame.Size;
+			var frame = new CGRect (0, 0, size.Width, size.Height);
 			var plotView = new PlotView (frame);
-			var model = new PlotModel{ Title = "Set Point Value" };
-			model.Axes.Add (new LinearAxis { Position = AxisPosition.Bottom });
-			model.Axes.Add (new LinearAxis { Position = AxisPosition.Left });
-			model.Series.Add (new FunctionSeries (Math.Sin, 0, 10, 200));
-			plotView.Model = model;
-			GraphTabView.AddSubview(plotView);
+			plotView.Model = getGraph();
+			GraphView.AddSubview(plotView);
 
 		}
 
-		partial void nextQuoteClicked (Foundation.NSObject sender){
+		partial void nextQuoteClicked (NSObject sender){
 			
 			var quote = chuckNorrisQuotes.GetNextQuote();
 			labelChuckSays.StringValue = quote;
 		}
 
+		private PlotModel getGraph(){
+
+			var plotModel = new PlotModel {
+				Title = "Chuck Norris Performance",
+				Subtitle = "",
+				PlotType = PlotType.Cartesian,
+				Background = OxyColors.White,
+
+			};
+
+			plotModel.Series.Add (new FunctionSeries (Math.Log, -10, 10, 0.1) { Color = OxyColors.Green });
+
+			var xAxis = new LinearAxis
+			{
+				Position = AxisPosition.Bottom,
+				Title = "Years",
+				MajorGridlineStyle = LineStyle.Solid,
+				MinorGridlineStyle = LineStyle.None,
+			};
+
+			plotModel.Axes.Add(xAxis);
+
+			var yAxis = new LinearAxis
+			{
+				Position = AxisPosition.Left,
+				Title = "Kicks per Second",
+				MajorGridlineStyle = LineStyle.Solid,
+				MinorGridlineStyle = LineStyle.None,
+			};
+
+			plotModel.Axes.Add(yAxis);
+
+			return plotModel;
+		}
 	}
 }

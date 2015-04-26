@@ -13,38 +13,19 @@ namespace ChuckNorrisMac
 	partial class MainWindowController
 	{
 		[Outlet]
-		AppKit.NSView BehindView { get; set; }
-
-		[Outlet]
-		AppKit.NSView GraphTabView { get; set; }
-
-		[Outlet]
-		ChuckNorrisMac.MainWindow GraphView { get; set; }
+		AppKit.NSView GraphView { get; set; }
 
 		[Outlet]
 		AppKit.NSTextField labelChuckSays { get; set; }
 
 		[Outlet]
-		AppKit.NSView tabView { get; set; }
-
-		[Outlet]
-		AppKit.NSView WindowLayerView { get; set; }
+		AppKit.NSView QuotesView { get; set; }
 
 		[Action ("nextQuoteClicked:")]
 		partial void nextQuoteClicked (Foundation.NSObject sender);
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (BehindView != null) {
-				BehindView.Dispose ();
-				BehindView = null;
-			}
-
-			if (GraphTabView != null) {
-				GraphTabView.Dispose ();
-				GraphTabView = null;
-			}
-
 			if (GraphView != null) {
 				GraphView.Dispose ();
 				GraphView = null;
@@ -55,14 +36,9 @@ namespace ChuckNorrisMac
 				labelChuckSays = null;
 			}
 
-			if (tabView != null) {
-				tabView.Dispose ();
-				tabView = null;
-			}
-
-			if (WindowLayerView != null) {
-				WindowLayerView.Dispose ();
-				WindowLayerView = null;
+			if (QuotesView != null) {
+				QuotesView.Dispose ();
+				QuotesView = null;
 			}
 		}
 	}
